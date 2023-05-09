@@ -1,0 +1,47 @@
+<!-- Start deneb_banner section -->
+<section class="deneb_banner banner_v1">
+	<div class="shape_v1">
+		<img src="{{ "/assets/images/shape/shape_1.png" | absolute_url }}" class="shape_1" alt="slider one">
+	</div>
+	<div class="container">
+		<div class="hero_slider">
+			{% for slider in page.slider %}
+			<div class="signle_slider">
+				<div class="row align-items-center">
+					<div class="col-lg-5">
+						<div class="banner_content wow fadeInLeft">
+							<h1>{{ slider.heading }}</h1>
+							<h5>{{ slider.heading2 }}</h5>
+							<p>{{ slider.text }}</p>
+							<a href="{{ slider.button.link }}" class="deneb_btn">{{ slider.button.name }}</a>
+						</div>
+						<div class="contact_form">
+							<form action="https://formsubmit.io/send/texthasitha@gmail.com">
+								
+								<div class="row">								
+									<div>
+										<div class="form_group">
+											<input type="email"  style="box-shadow: 2.5px 4.33px 5px 0px rgba(0, 0, 0, 0.15); background-color: #fff; margin-left: 15px; height: 45px; padding-left: 20px; border-radius: 15px 0px 0px 15px;" placeholder="Email Address" name="email" required>
+										</div>
+									</div>
+									<div >
+										<div class="button_box">
+											<button type="submit" style=" color: #fff; height: 45px; min-width: 170px; background-color: #F6921E; border-radius: 0px 15px 15px 0px; box-shadow: 2.5px 4.33px 5px 0px rgba(0, 0, 0, 0.15);">Join the waitlist</button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="col-lg-7">
+						<div class="deneb_img_box wow fadeInRight">
+							<img src="{{ slider.image | absolute_url }}" class="img-fluid" alt="slider two" />
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}			
+		</div>
+	</div>
+</section>
+<!-- End deneb_banner section-->
